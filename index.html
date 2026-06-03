@@ -9,7 +9,7 @@
   :root{
     --bg:#0e1116; --panel:#161b22; --panel2:#1c232d; --line:#2a3340;
     --ink:#e9eef4; --muted:#9aa7b6; --soft:#6f7d8c;
-    --accent:#d9a441; --accent2:#3a86ff; --green:#46c98b;
+    --accent:#d9a441; --green:#46c98b;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -18,37 +18,37 @@
     color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased;
     min-height:100vh; padding:48px 20px 64px;
   }
-  .wrap{max-width:980px;margin:0 auto}
+  .wrap{max-width:1080px;margin:0 auto}
   .brand{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--muted);font-weight:600}
   .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
   h1{font-size:clamp(28px,5vw,42px);font-weight:700;letter-spacing:-.02em;margin:18px 0 14px;line-height:1.1}
   h1 span{color:var(--accent)}
-  .lead{color:var(--muted);font-size:clamp(15px,2.2vw,17px);max-width:680px}
+  .lead{color:var(--muted);font-size:clamp(15px,2.2vw,17px);max-width:720px}
   .note{margin-top:18px;padding:14px 16px;background:var(--panel);border:1px solid var(--line);
-    border-radius:12px;font-size:14px;color:var(--muted);max-width:680px}
+    border-radius:12px;font-size:14px;color:var(--muted);max-width:720px}
   .note b{color:var(--ink)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:34px 0 10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin:34px 0 10px}
   .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
-    border-radius:16px;padding:24px 22px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+    border-radius:16px;padding:22px 20px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
   .card:hover{transform:translateY(-3px);border-color:#3a4654}
   .card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
     background:linear-gradient(90deg,var(--accent),transparent)}
-  .seg{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  .ramo{font-size:21px;font-weight:700;margin:8px 0 4px}
-  .canal{display:inline-block;font-size:12px;color:var(--muted);background:#0d1218;
-    border:1px solid var(--line);padding:3px 10px;border-radius:99px;margin-bottom:20px}
-  .rows{display:flex;flex-direction:column;gap:14px}
+  .seg-top{display:flex;justify-content:space-between;align-items:center}
+  .seg{font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .canal{font-size:11px;color:var(--muted);background:#0d1218;
+    border:1px solid var(--line);padding:3px 9px;border-radius:99px}
+  .ramo{font-size:20px;font-weight:700;margin:9px 0 18px;letter-spacing:-.01em}
+  .rows{display:flex;flex-direction:column;gap:13px}
   .row{display:flex;justify-content:space-between;align-items:baseline;
-    padding-bottom:12px;border-bottom:1px dashed var(--line)}
+    padding-bottom:11px;border-bottom:1px dashed var(--line)}
   .row:last-child{border-bottom:none;padding-bottom:0}
   .k{font-size:13px;color:var(--muted)}
-  .v{font-size:20px;font-weight:700;letter-spacing:-.01em}
-  .v.big{font-size:26px}
+  .v{font-size:19px;font-weight:700;letter-spacing:-.01em}
+  .v.big{font-size:24px}
   .v.hi{color:var(--green)}
   .foot{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);
     display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;color:var(--soft);font-size:13px}
-  .foot a{color:var(--accent);text-decoration:none}
   .stamp{font-size:12px;color:var(--soft)}
 </style>
 </head>
@@ -56,29 +56,37 @@
 <div class="wrap">
   <div class="brand"><span class="dot"></span> JC Tráfego Qualificado</div>
   <h1>Resultados <span>por segmento</span></h1>
-  <p class="lead">Cases reais de campanhas que gerimos, no formato direto: ramo de atuação, quanto foi investido, quantos resultados saíram e a que custo. Sem maquiagem.</p>
+  <p class="lead">Cases reais de campanhas que gerimos, no formato direto: ramo de atuação, quanto foi investido, quantos resultados saíram e a que custo. Sem maquiagem — cada número vem direto das plataformas (Meta Ads e Google Ads).</p>
 
   <div class="note">
-    <b>Por que sem nome de cliente?</b> Por confidencialidade comercial, identificamos cada case apenas pelo <b>segmento</b> — os números abaixo são extraídos diretamente das plataformas (Meta Ads e Google Ads), não são estimativas.
+    <b>Por que sem nome de cliente?</b> Por confidencialidade comercial, cada case é identificado apenas pelo <b>segmento</b>. O tipo de resultado muda conforme o objetivo do negócio: <b>leads</b> (contato qualificado), <b>conversas no WhatsApp</b> (quando o fechamento é no atendimento) ou <b>vendas</b> (e-commerce).
   </div>
 
   <div class="grid">
 
     <div class="card">
-      <div class="seg">Case 01</div>
-      <div class="ramo">Turismo / Viagens</div>
-      <span class="canal">Meta Ads</span>
+      <div class="seg-top"><span class="seg">Case 01</span><span class="canal">Meta Ads</span></div>
+      <div class="ramo">Automotivo — revenda de veículos</div>
       <div class="rows">
-        <div class="row"><span class="k">Investimento</span><span class="v">R$ 862,80</span></div>
-        <div class="row"><span class="k">Leads gerados</span><span class="v big">39</span></div>
-        <div class="row"><span class="k">Custo por lead</span><span class="v hi">R$ 22,12</span></div>
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 20.093,53</span></div>
+        <div class="row"><span class="k">Conversas no WhatsApp</span><span class="v big">2.996</span></div>
+        <div class="row"><span class="k">Custo por conversa</span><span class="v hi">R$ 6,71</span></div>
       </div>
     </div>
 
     <div class="card">
-      <div class="seg">Case 02</div>
+      <div class="seg-top"><span class="seg">Case 02</span><span class="canal">Google Ads</span></div>
+      <div class="ramo">Consórcio &amp; crédito</div>
+      <div class="rows">
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 6.942,75</span></div>
+        <div class="row"><span class="k">Leads gerados</span><span class="v big">230</span></div>
+        <div class="row"><span class="k">Custo por lead</span><span class="v hi">R$ 30,18</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="seg-top"><span class="seg">Case 03</span><span class="canal">Google Ads</span></div>
       <div class="ramo">Design de interiores</div>
-      <span class="canal">Google Ads</span>
       <div class="rows">
         <div class="row"><span class="k">Investimento</span><span class="v">R$ 13.084,44</span></div>
         <div class="row"><span class="k">Leads gerados</span><span class="v big">136</span></div>
@@ -87,13 +95,62 @@
     </div>
 
     <div class="card">
-      <div class="seg">Case 03</div>
-      <div class="ramo">Livros / E-commerce</div>
-      <span class="canal">Meta Ads</span>
+      <div class="seg-top"><span class="seg">Case 04</span><span class="canal">Google Ads</span></div>
+      <div class="ramo">Manutenção industrial (B2B)</div>
       <div class="rows">
-        <div class="row"><span class="k">Investimento</span><span class="v">R$ 16.917,29</span></div>
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 10.235,23</span></div>
+        <div class="row"><span class="k">Leads gerados</span><span class="v big">141</span></div>
+        <div class="row"><span class="k">Custo por lead</span><span class="v hi">R$ 72,59</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="seg-top"><span class="seg">Case 05</span><span class="canal">Google Ads</span></div>
+      <div class="ramo">Saúde &amp; clínicas</div>
+      <div class="rows">
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 10.199,40</span></div>
+        <div class="row"><span class="k">Leads gerados</span><span class="v big">97</span></div>
+        <div class="row"><span class="k">Custo por lead</span><span class="v hi">R$ 105,15</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="seg-top"><span class="seg">Case 06</span><span class="canal">Google Ads</span></div>
+      <div class="ramo">Serviços B2B — facilities</div>
+      <div class="rows">
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 4.143,22</span></div>
+        <div class="row"><span class="k">Leads gerados</span><span class="v big">80</span></div>
+        <div class="row"><span class="k">Custo por lead</span><span class="v hi">R$ 51,79</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="seg-top"><span class="seg">Case 07</span><span class="canal">Meta Ads</span></div>
+      <div class="ramo">Livros — e-commerce</div>
+      <div class="rows">
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 16.917,79</span></div>
         <div class="row"><span class="k">Vendas realizadas</span><span class="v big">347</span></div>
         <div class="row"><span class="k">Custo por venda</span><span class="v hi">R$ 48,75</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="seg-top"><span class="seg">Case 08</span><span class="canal">Meta Ads</span></div>
+      <div class="ramo">Turismo &amp; lazer</div>
+      <div class="rows">
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 862,80</span></div>
+        <div class="row"><span class="k">Leads gerados</span><span class="v big">39</span></div>
+        <div class="row"><span class="k">Custo por lead</span><span class="v hi">R$ 22,12</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="seg-top"><span class="seg">Case 09</span><span class="canal">Meta Ads</span></div>
+      <div class="ramo">Alimentação — pizzaria</div>
+      <div class="rows">
+        <div class="row"><span class="k">Investimento</span><span class="v">R$ 3.770,50</span></div>
+        <div class="row"><span class="k">Conversas no WhatsApp</span><span class="v big">292</span></div>
+        <div class="row"><span class="k">Custo por conversa</span><span class="v hi">R$ 12,91</span></div>
       </div>
     </div>
 
